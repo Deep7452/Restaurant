@@ -1,0 +1,108 @@
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.img-responsive{
+    vertical-align: middle;
+    height: 58px;
+    border-radius: 26px;   
+}
+.logout{
+    margin-right: 15px;
+}
+.navbar{
+    background-color:#d7cdcdfa;
+}
+.mainDiv{
+    background-image: url(../images/bg4.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.navbar-toggler{
+    background-color: tomato;
+}
+.heading,#paraDashboard,#shopHeading{
+    margin-top: 37vh;
+    text-align: center;
+    color: azure;
+   
+}
+#paraDashboard{
+    margin-top: 0;
+}
+/* Shoping page css */
+#shopHeading{
+    margin-top: 0;
+    color: black;
+}
+#card1{
+    height:42vh;
+}
+.orderDiv{
+    display: flex;
+    align-items: center;
+}
+.orderbutton{
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+/* header Css */
+.userEmail{
+    margin-right: 5vh;
+}
+/* order form  css */
+.orderForm{
+    margin: 100px 35px 0px 44px;
+}
+.container1{
+height: 71vh;
+display: flex;
+justify-content: center;
+margin-top: 5vh;
+}
+
+#counterValue,#incrementBtn,#dicrementBtn{
+    border: 1px solid black;
+    height: 26px;
+    width: 27px;
+    text-align: center;
+
+}
+
+#card3{
+height: 42vh;
+width: 34vw;
+}
+.orderCardMain{
+    height: 80vh;
+    width: 100vh;
+}
+
+#heading{
+    text-align: center;
+    margin-top: 10px;
+}
+/* Menu page css */
+.main{
+  
+    height: 70vh;
+   
+    /* justify-content: center;
+    align-items: center; */
+}
+.card-img2{
+    width: 40vh;
+}
+.card-deck1{
+    display: inline-block;
+    flex-direction: row;
+    height: 52vh;
+    width: 47vh;
+}

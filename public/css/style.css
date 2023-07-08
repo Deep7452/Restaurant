@@ -3,19 +3,42 @@ body{
   margin: 0;
   padding: 0;
 }
+/* comman css */
+a{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    font-weight: 300;
+}
+h1,h6,h4,h5,p{
+    
+    font-family: 'Dancing Script', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+
+}
 .img-responsive{
     vertical-align: middle;
     height: 58px;
-    border-radius: 26px;   
+    border-radius: 26px; 
+}
+.img-responsive:hover{
+    background-color: black;
 }
 .logout{
     margin-right: 15px;
 }
 .navbar{
-    background-color:#d7cdcdfa;
+    background-color:#fff;
 }
+/* dasboard */
 .mainDiv{
-    background-image: url(../images/bg4.jpg);
+    background-image: url(../images/dashboard.jpg);
+
+}
+.mainDiv,.orderSectionDiv{
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -25,9 +48,9 @@ body{
     background-color: tomato;
 }
 .heading,#paraDashboard,#shopHeading{
-    margin-top: 37vh;
+    margin-top: 36vh;
     text-align: center;
-    color: azure;
+    color: rgb(250, 229, 0);
    
 }
 #paraDashboard{
@@ -75,34 +98,68 @@ margin-top: 5vh;
     text-align: center;
 
 }
+.orderSectionDiv{
+    background-image: url(../images/manu.jpg);
+   
+}
 
 #card3{
 height: 42vh;
 width: 34vw;
 }
-.orderCardMain{
-    height: 80vh;
-    width: 100vh;
-}
+
 
 #heading{
     text-align: center;
     margin-top: 10px;
 }
 /* Menu page css */
-.main{
-  
-    height: 70vh;
-   
-    /* justify-content: center;
-    align-items: center; */
+.menuDiv{
+    background-attachment: scroll;
+    margin-bottom: 5vh;
 }
 .card-img2{
-    width: 40vh;
+    width: 36vh;
 }
-.card-deck1{
-    display: inline-block;
-    flex-direction: row;
-    height: 52vh;
-    width: 47vh;
+.card{
+   
+    flex-direction: row; 
 }
+
+
+/* footer css */
+.footerDiv{
+    display: flex;
+    width: 100vw;;
+    height: 20vh;
+    margin-top: 4px;
+    background-color:white;
+    justify-content: center;
+    align-items: center;
+}
+.div1,.div2,.div3{
+    width: 50vh;
+    height: 21vh;
+    list-style: none;
+    text-align: center;
+    color: black;
+
+}
+
+ li a{
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+   
+
+ }
+ .imgFooter{
+    height: 20px;
+
+ }
+ .icon1.icon2.icon3{
+    border: 2px solid black;
+    border-radius: 10px;
+ }
+

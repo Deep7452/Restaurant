@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<body><div class="orderSectionDiv">
     <x-header />
-    <h1 class=" mt-2 text-center">Orderd page</h1>
+    <hr>
+    <h1 class=" mt-2 text-center"><b>Orderd page</b></h1>
     <div class="container1">
         <div class=" card-deck1">
             <div class="card">
@@ -40,6 +41,9 @@
             </div>
         </div>
     </div>
+    </div>
+    <hr>
+    <x-footer/>
 </body>
 
 </html>
@@ -73,15 +77,13 @@
       }
     }
     function calculatePrize(){
-      // console.log(initialPrize, typeof(initialPrize))
-      // console.log(counter, typeof(counter))
-      document.getElementById('totalPrice').innerHTML = parseInt(initialPrize) * counter;
+         document.getElementById('totalPrice').innerHTML = parseInt(initialPrize) * counter;
     }
     function show(){
-      console.log(id);
-      console.log(name);
-      console.log(price);
-      console.log(description);
+    //   console.log(id);
+    //   console.log(name);
+    //   console.log(price);
+    //   console.log(description);
     
     }
 

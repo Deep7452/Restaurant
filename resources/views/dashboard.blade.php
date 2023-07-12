@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Dashboard</title>
+    <title>@yield('title')</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,8 +20,6 @@
     aliquid quos autem at ullam <br>explicabo aliquam dicta! Officiis deleniti velit 
     debitis<br> aperiam ad excepturi, natus ullam mollitia alias.
   </p>
-
-
 </div>
 <x-footer/>
   </body>

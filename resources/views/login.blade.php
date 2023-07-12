@@ -33,7 +33,7 @@
         <div class="form-group">
             <label for="">Email id</label>
             <input type="text"
-              class="form-control" name="email" id="" aria-describedby="helpId" placeholder=""  value="{{old('email')}}"/>
+              class="form-control" name="email" id="" aria-describedby="helpId" placeholder=""  value="{{old('email')}}" autofocus/>
            <span class="text-danger">
             @error('email')
                 {{$message}}

@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token()}}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,9 +17,11 @@
 
 <body>
     <nav class="navbar navbar-expand-lg ">
+        <div>
         <a class="navbar-brand" href="#">
             <img src="{{ asset('logo/chef.jpg') }}" alt="chef logo" class="img-responsive" />
         </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">...</span>
@@ -38,7 +42,7 @@
                     <a class="nav-link" href="{{ route('shoping') }}">shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reservation</a>
+                    <a class="nav-link" href="{{ route('reservation')}}">Reservation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">News</a>

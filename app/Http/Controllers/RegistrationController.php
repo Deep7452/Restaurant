@@ -19,7 +19,7 @@ class RegistrationController extends Controller
         ]; 
         $data['name'] =$request->fname . " " . $request->lname;
         $data['email'] =$request->email;
-        // $data['password'] =Hash::make($request->password);
+      
         $data['password'] = $request->password;
 
         $userDetails = $request->all();

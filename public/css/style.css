@@ -25,7 +25,7 @@ font-family: 'Roboto', sans-serif;
     border-radius: 26px; 
 }
 .img-responsive:hover{
-    background-color: black;
+    background-color: skyblue;
 }
 .logout{
     margin-right: 15px;
@@ -79,6 +79,11 @@ font-family: 'Roboto', sans-serif;
 /* header Css */
 .userEmail{
     margin-right: 5vh;
+    
+}
+.nav-link{
+    font-style: italic;
+    font-weight: bold;
 }
 /* order form  css */
 .orderForm{
@@ -162,4 +167,37 @@ width: 34vw;
     border: 2px solid black;
     border-radius: 10px;
  }
+ /* Reservation page css */
+ .reservationpageDiv{
+    height: 50vh;
+    display: flex;
+    width:auto;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    color: #fff;
+    font-size: 6vh;
+    font-style: bold;
+    background-image: url(../images/reservation.jpg);
+ }
+ .res-form-imgDiv{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+   
+ }
+.res-imgDiv{
+    width: 99vh;
+    height: 59vh;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/booktable.jpg);
+    
+}
+.res-formDiv{
+    height: 59vh;
+    width: 99vh;
 
+}

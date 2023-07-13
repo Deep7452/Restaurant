@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label for="">Item Name</label>
                 <input type="text" class="form-control" name="itemName" id="" aria-describedby="helpId"
-                    placeholder="" value="{{ old('ItemName') }}" />
+                    placeholder="" value="{{ old('ItemName') }}" autofocus />
                 <span class="text-danger">
                     @error('ItemName')
                         {{ $message }}
@@ -90,7 +90,7 @@
         <div class="menuDiv">
             <div class="container">
                 <div class="card">
-                    <img src="{{ public_path('images') . '\\' . $data->itemImage }}" class=" card-img2" alt="image">
+                    <img src="{{ public_path('./images') . '\\' . $data->itemImage }}" class=" card-img2" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">{{ $data->itemName }}</h5>
                         <p class="">{{ $data->description }} </p>

@@ -2,6 +2,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\menuController;
 use App\Http\Controllers\orderController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\shopingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
@@ -20,7 +21,7 @@ use App\Http\Controllers\RegistrationController;
 Route::group(['prefix' => '/registration'], function () {
     Route::get('/', [RegistrationController::class, 'index']);
     Route::post('/', [RegistrationController::class, 'store']);
-});
+}); 
 Route::group(['prefix' => '/login'], function () {
     Route::get('/', [LoginController::class, 'showLoginForm']);
     Route::post('/', [LoginController::class, 'login']);
@@ -35,9 +36,14 @@ Route::group(['prefix' => 'shoping'], function () {
 Route::group(['prefix' => 'order'], function () {
     Route::get('/', [orderController::class, 'order'])->name('order');
     Route::get('/{item_id}', [orderController::class, 'index']);
+    Route::post('/',[orderController::class,'itemMenu'])->name('itemMenu');
 
 });
 Route::group(['prefix' => 'menu'], function () {
     Route::get('/', [menuController::class, 'index'])->name('menu');
     Route::post('/', [menuController::class, 'itemMenu']);
+});
+Route::group(['prefix'=>'reservation'], function(){
+    Route::get('/',[ReservationController::class, 'index'])->name('reservation');
+    Route::post('/',[ReservationController::class, 'store'])->name('store');
 });

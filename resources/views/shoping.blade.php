@@ -31,7 +31,6 @@
                     <a href="{{ route('order') }}" class="orderbutton">Order Now</a>
                     <h2>Price .$10</h2>
                 </div>
-
             </div>
         </div>
         <div class="card">
@@ -57,10 +56,8 @@
                     consequatur quaerat expedita consectetur inventore laudantium.</p>
                 <div class=orderDiv>
                     <a href="{{ route('order') }}" class="orderbutton">Order Now</a>
-
                     <h2>Price .$10</h2>
                 </div>
-
             </div>
         </div>
     </div>

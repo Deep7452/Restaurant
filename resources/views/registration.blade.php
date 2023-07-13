@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="">First Name</label>
                 <input type="text" class="form-control" name="fname" id="" aria-describedby="helpId"
-                    placeholder="" value="{{ old('fname') }}" />
+                    placeholder="" value="{{ old('fname') }}" autofocus />
                 <span class="text-danger">
                     @error('fname')
                         {{ $message }}
@@ -68,7 +68,9 @@
                     @enderror
                 </span>
             </div>
+            <div class ="d-flex">
             <button class="btn btn-primary">Register</button>
+            </div>
 
         </div>
     </form>

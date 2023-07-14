@@ -10,11 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token()}}">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div>
@@ -29,15 +29,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mt-1 p-4 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('dashboard') }}">Home
-                       <span class="sr-only">(current)
-                        </span>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('dashboard') }}">Home
                       </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('menu') }}">Menu</a>
-                </li>
+                <ul class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      menu
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{{route('menu')}}">Menu/Order</a></li>
+                      <li><a class="dropdown-item" href="{{route('orders')}}">order Details</a></li>
+                    </ul>
+                </ul>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('shoping') }}">shop</a>
                 </li>
@@ -50,9 +54,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
             </ul>
             <div>
                 <a class="navbar-brand" href="#">
@@ -62,8 +63,10 @@
             @auth
                 <form class="form-inline my-2 my-lg-0" method="POST">
                     @csrf
-                    <h5 class="userEmail">resto@gmail.com</h5>
-                    <a class=" logout  my-2 my-sm-0" href="{{ route('logout') }}">logout</a>
+                    @if (Auth::check())      
+                    <h5 class="userEmail">Welcome,{{Auth::user()->name}}</h5>
+                    @endif
+                    <a class=" logout my-2 my-sm-0" href="{{ route('logout') }}">logout</a>
                 </form>
             @endauth
         </div>

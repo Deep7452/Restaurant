@@ -9,9 +9,12 @@ use App\Models\product;
 use Illuminate\Support\Facades\Auth;
 class orderController extends Controller
 {
+    public function orders(Request $request){
+        $collection =orders_table::all();
+        return view('orders',compact('collection'));
+    }
     public function index(Request $request , $item_id){
         $data = Product::find($item_id);
-        $email = Auth::user()->email;
         return view('order',compact('data'));
         }
     

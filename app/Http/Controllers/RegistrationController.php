@@ -13,7 +13,7 @@ class RegistrationController extends Controller
         $detail=[
             'fname' => 'required|string|max:60',
             'lname' =>'required|string',
-            'email'=> 'required|email',
+            'email'=> 'required|unique:users,email',
             'password' => 'required|confirmed|min:8',
             'password_confirmation' =>'required|min:8',
         ]; 

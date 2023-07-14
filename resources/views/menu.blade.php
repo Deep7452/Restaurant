@@ -90,7 +90,7 @@
         <div class="menuDiv">
             <div class="container">
                 <div class="card">
-                    <img src="{{ public_path('./images') . '\\' . $data->itemImage }}" class=" card-img2" alt="image">
+                    <img src="{{ asset('./images') . '\\' . $data->itemImage }}" class=" card-img2" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">{{ $data->itemName }}</h5>
                         <p class="">{{ $data->description }} </p>

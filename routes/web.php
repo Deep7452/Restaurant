@@ -34,7 +34,7 @@ Route::group(['prefix' => 'shoping'], function () {
     Route::get('/', [shopingController::class, 'showShoping'])->name('shoping');
 });
 Route::group(['prefix' => 'order'], function () {
-    Route::get('/', [orderController::class, 'order'])->name('order');
+    Route::get('/', [orderController::class, 'orders'])->name('orders');
     Route::get('/{item_id}', [orderController::class, 'index']);
     Route::post('/',[orderController::class,'itemMenu'])->name('itemMenu');
 

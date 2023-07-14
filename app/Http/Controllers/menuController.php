@@ -18,6 +18,7 @@ class menuController extends Controller
         $itemDetails=[
             'itemName'=>'required|max:60',
             'description'=>'required|max:250',
+            'itemImage'=>'required|mimes:jpg,png,jpeg',
             'itemPrice'=>'required|string',
         ];   
          $newItemDelails = $request->all();  

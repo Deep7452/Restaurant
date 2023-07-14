@@ -21,7 +21,7 @@
     <div class="container1">
         <div class=" card-deck1">
             <div class="card">
-                <img src="{{ $data['itemImage'] }}" class="  w-full card-img2" id="card3"alt="image">
+                <img src="{{ asset('./images') . '\\' . $data->itemImage }}" class="  w-full card-img2" id="card3"alt="image">
                 <div class="card-body">
                     <h5 class="card-title" id='itemName'>{{ $data['itemName'] }}</h5>
                     <h6>Item Id:- <span id="itemId">{{ $data['id'] }}</span></h6>

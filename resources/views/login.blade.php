@@ -28,8 +28,8 @@
     
     <form action="{{('/login')}}" method="POST">
         @csrf
-    <div class="container">
-        <h1 class="text-center">Login form</h1>
+    <div class="container mt-4">
+        <h1 class="text-center ">Login form</h1>
         <div class="form-group">
             <label for="">Email id</label>
             <input type="text"
@@ -50,7 +50,11 @@
             @enderror 
            </span>
            </div>
+           <div class="container">
           <button class="btn btn-primary">login</button>
+        
+          
+           </div>
 
     </div>
     </form> 

@@ -12,12 +12,9 @@ a{
     font-weight: 300;
 }
 h1,h6,h4,h5,p{
-    
     font-family: 'Dancing Script', cursive;
-font-family: 'Dosis', sans-serif;
-font-family: 'Roboto', sans-serif;
-
-
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .img-responsive{
     vertical-align: middle;
@@ -33,10 +30,9 @@ font-family: 'Roboto', sans-serif;
 .navbar{
     background-color:#fff;
 }
-/* dasboard */
+/* home page */
 .mainDiv{
-    background-image: url(../images/dashboard.jpg);
-
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/dashboard.jpg);
 }
 .mainDiv,.orderSectionDiv{
     height: 100vh;
@@ -50,36 +46,15 @@ font-family: 'Roboto', sans-serif;
 .heading,#paraDashboard,#shopHeading{
     margin-top: 36vh;
     text-align: center;
-    color: rgb(250, 229, 0);
+    color:#fff;
    
 }
 #paraDashboard{
     margin-top: 0;
 }
-/* Shoping page css */
-#shopHeading{
-    margin-top: 0;
-    color: black;
-}
-#card1{
-    height:42vh;
-}
-.orderDiv{
-    display: flex;
-    align-items: center;
-}
-.orderbutton{
-    font-size: larger;
-    font-weight: bolder;
-    text-decoration: none;
-    cursor: pointer;
-
-
-}
 /* header Css */
 .userEmail{
-    margin-right: 5vh;
-    
+    margin-right: 5vh;    
 }
 .nav-link{
     font-style: italic;
@@ -91,6 +66,7 @@ font-family: 'Roboto', sans-serif;
 }
 .container1{
 height: 71vh;
+
 display: flex;
 justify-content: center;
 margin-top: 5vh;
@@ -104,8 +80,7 @@ margin-top: 5vh;
 
 }
 .orderSectionDiv{
-    background-image: url(../images/manu.jpg);
-   
+    background-image: url(../images/manu.jpg); 
 }
 #heading{
     text-align: center;
@@ -120,8 +95,11 @@ margin-top: 5vh;
     width: 36vh;
 }
 .card{
-   
     flex-direction: row; 
+}
+/* Add Product  pagecss */
+.AddProductdivfooter{
+    margin-top:80px;
 }
 
 
@@ -148,8 +126,6 @@ margin-top: 5vh;
     color: black;
     cursor: pointer;
     text-decoration: none;
-   
-
  }
  .imgFooter{
     height: 20px;
@@ -159,20 +135,18 @@ margin-top: 5vh;
     border: 2px solid black;
     border-radius: 10px;
  }
- /* Reservation page css */
- .reservationpageDiv{
+ /* Contact  page css */
+ .contactpageDiv,.aboutpageDiv{
     height: 50vh;
     display: flex;
-    width:auto;
     background-repeat: no-repeat;
-    opacity: 0.8;
     justify-content: center;
     align-items: center;
     font-weight:700;
     color: #fff;
     font-size: 6vh;
     font-style: bold;
-    background-image: url(../images/reservation.jpg);
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/reservation.jpg);
  }
  .res-form-imgDiv{
     display: flex;
@@ -193,4 +167,63 @@ margin-top: 5vh;
     width: 99vh;
 
 }
-
+/* about page css */
+.aboutpageDiv{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/about.jpg);
+}
+.teamDiv{
+    display: flex;
+    height: 40vh;
+    width:auto;
+    align-items: center;
+    gap: 40px;
+    margin-left: 10px;
+}
+.teamSubDiv1,.teamSubDiv2,.teamSubDiv3,.teamSubDiv4,.teamSubDiv5{
+    display: flex;
+    justify-content:center;
+    align-items: center  ;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 40vh;
+    width:35vh; 
+    box-shadow: 5px 6px 5px 5px #888888;
+}
+.image-chef{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+   
+}
+.aboutcantainer{
+    height: 80vh;
+    display: flex;
+    border: 2x solid black;
+}
+.aboutcantainer1,.aboutcantainer2{
+    height: 60vh;
+    width: 100vh; 
+    border: 2px solid black;
+}
+.aboutcantainer2{
+background-attachment:scroll;
+overflow: scroll;
+}
+#more{
+    display: none;
+}
+.aboutcantainer1{
+    position: relative;
+    background-repeat: no-repeat;
+}
+.number{
+    position:absolute;
+    color: #fff;
+}
+.captionText{
+    position: absolute;
+    
+}

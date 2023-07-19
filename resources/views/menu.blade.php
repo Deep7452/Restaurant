@@ -14,77 +14,10 @@
 </head>
 <body>
     <x-header/>
-    @if (session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Congratulations!</strong> {{ session('success') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @elseif(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Sorry!</strong> {{ session('error') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
-<div class="menuFormDiv">
-    <div class="formdiv1">
-     <form action="{{ '/menu' }}" method="POST" enctype="multipart/form-data" class="mt-4">
-         @csrf
-         <div class="container">
-            <h1 class="text-center">Add Food</h1>
-            <div class="form-group">
-                <label for="">Item Name</label>
-                <input type="text" class="form-control" name="itemName" id="" aria-describedby="helpId"
-                    placeholder="" value="{{ old('ItemName') }}" autofocus />
-                <span class="text-danger">
-                    @error('ItemName')
-                        {{ $message }}
-                    @enderror
-                </span>
-            </div>
-            <div class="form-group">
-                <label for="description">Item Description</label>
-                <input type="text" class="form-control" name="description" id="" aria-describedby="helpId"
-                    placeholder="" value="{{ old('description') }}" />
-                <span class="text-danger">
-                    @error('description')
-                        {{ $message }}
-                    @enderror
-                </span>
-            </div>
-            <div class="form-group">
-                <label for="">Item Image</label>
-                <input type="file" class="form-control" name="itemImage" id="itemImage" aria-describedby="helpId"
-                    placeholder="" />
-                <span class="text-danger">
-                    @error('itemImage')
-                        {{ $message }}
-                    @enderror
-                </span>
-            </div>
-            <div class="form-group">
-                <label for="itemPrice">Price($)</label>
-                <input type="text" class="form-control" name="itemPrice" id="" aria-describedby="helpId"
-                    placeholder="" />
-                <span class="text-danger">
-                    @error('itemPrice')
-                        {{ $message }}
-                    @enderror
-                </span>
-                <div class="mt-2">
-                <button class="btn btn-primary">Add Product</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    </div>
-
-    <div class="container mt-4">
-        <h2 class="text-center">Item Menu</h2>
-    </div>
+   
+    <div class="contactpageDiv">
+        Menu Page
+    </div
     </hr>
     @foreach ($collection as $data)
         <div class="menuDiv">

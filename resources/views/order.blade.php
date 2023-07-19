@@ -27,7 +27,7 @@
                     <h6>Item Id:- <span id="itemId">{{ $data['id'] }}</span></h6>
                     <p class="" id="itemDescription">{{ $data['description'] }} </p>
                     <div class=orderDiv>
-                        <span>$</span><h2 id="totalPrice">{{ $data['itemPrice'] }}</h2>
+                        <span><h2>Price:$</h2></span><h2 id="totalPrice">{{ $data['itemPrice'] }}</h2>
                     </div>
                     <div class="mt-4 d-flex justify-content-center item-center">
                         <button id="incrementBtn" onclick='increment()'>+</button>
@@ -69,7 +69,7 @@
       }
     }
     function calculatePrize(){
-         document.getElementById('totalPrice').innerHTML = parseInt(initialPrize) * counter;
+         document.getElementById('totalPrice').innerHTML = parseFloat(initialPrize) * counter;
     }
     function submitHandler() {
         const itemName =document.getElementById('itemName').innerText;

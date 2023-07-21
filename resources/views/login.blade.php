@@ -28,12 +28,12 @@
     
     <form action="{{('/login')}}" method="POST">
         @csrf
-    <div class="container">
-        <h1 class="text-center">Login form</h1>
+    <div class="container mt-4">
+        <h1 class="text-center ">Login form</h1>
         <div class="form-group">
             <label for="">Email id</label>
             <input type="text"
-              class="form-control" name="email" id="" aria-describedby="helpId" placeholder=""  value="{{old('email')}}"/>
+              class="form-control" name="email" id="" aria-describedby="helpId" placeholder=""  value="{{old('email')}}" autofocus/>
            <span class="text-danger">
             @error('email')
                 {{$message}}
@@ -50,7 +50,11 @@
             @enderror 
            </span>
            </div>
+           <div class="container">
           <button class="btn btn-primary">login</button>
+        
+          
+           </div>
 
     </div>
     </form> 

@@ -13,13 +13,15 @@ class RegistrationController extends Controller
         $detail=[
             'fname' => 'required|string|max:60',
             'lname' =>'required|string',
-            'email'=> 'required|email',
+            'email'=> 'required|unique:users,email',
+            'address'=>'required|max:255',
             'password' => 'required|confirmed|min:8',
             'password_confirmation' =>'required|min:8',
         ]; 
         $data['name'] =$request->fname . " " . $request->lname;
+        $data['address']=$request->address;
         $data['email'] =$request->email;
-        // $data['password'] =Hash::make($request->password);
+      
         $data['password'] = $request->password;
 
         $userDetails = $request->all();

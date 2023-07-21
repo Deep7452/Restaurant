@@ -46,13 +46,19 @@ h1,h6,h4,h5,p{
 .heading,#paraDashboard,#shopHeading{
     margin-top: 36vh;
     text-align: center;
-    color:#fff;
-   
+    color:#fff;  
 }
 #paraDashboard{
     margin-top: 0;
 }
 /* header Css */
+ul li a:hover{
+    background-color: rgb(172, 238, 171); 
+  }
+  ul a:hover{
+    background-color: rgb(172, 238, 171);
+  }
+
 .userEmail{
     margin-right: 5vh;    
 }
@@ -66,10 +72,9 @@ h1,h6,h4,h5,p{
 }
 .container1{
 height: 71vh;
-
 display: flex;
 justify-content: center;
-margin-top: 5vh;
+margin-top: 20vh;
 }
 
 #counterValue,#incrementBtn,#dicrementBtn{
@@ -80,7 +85,7 @@ margin-top: 5vh;
 
 }
 .orderSectionDiv{
-    background-image: url(../images/manu.jpg); 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/manu.jpg); 
 }
 #heading{
     text-align: center;
@@ -101,8 +106,6 @@ margin-top: 5vh;
 .AddProductdivfooter{
     margin-top:80px;
 }
-
-
 /* footer css */
 .footerDiv{
     display: flex;
@@ -118,9 +121,7 @@ margin-top: 5vh;
     list-style: none;
     text-align: center;
     color: black;
-
 }
-
  li a{
     font-weight: 400;
     color: black;
@@ -129,7 +130,6 @@ margin-top: 5vh;
  }
  .imgFooter{
     height: 20px;
-
  }
  .icon1.icon2.icon3{
     border: 2px solid black;
@@ -138,7 +138,8 @@ margin-top: 5vh;
  /* Contact  page css */
  .contactpageDiv,.aboutpageDiv{
     height: 50vh;
-    display: flex;
+    width: 200vh;
+    display:inline-flex;
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
@@ -151,16 +152,14 @@ margin-top: 5vh;
  .res-form-imgDiv{
     display: flex;
     justify-content:center ;
-    align-items: center;
-   
+    align-items: center; 
  }
 .res-imgDiv{
     width: 99vh;
     height: 59vh;   
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/booktable.jpg);
-    
+    background-image: url(../images/booktable.jpg);  
 }
 .res-formDiv{
     height: 59vh;
@@ -169,61 +168,118 @@ margin-top: 5vh;
 }
 /* about page css */
 .aboutpageDiv{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/about.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/reservation.jpg);
 }
 .teamDiv{
-    display: flex;
-    height: 40vh;
-    width:auto;
+    display:flex;
+    height: 50vh;
+    width:200vh;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    background: linear-gradient(to top, rgba(193, 214, 220, 0.6), rgba(214, 197, 214, 0.804));
     margin-left: 10px;
 }
-.teamSubDiv1,.teamSubDiv2,.teamSubDiv3,.teamSubDiv4,.teamSubDiv5{
-    display: flex;
+.teamSubDiv{
+    display: inline-flex;
     justify-content:center;
+    transition: transform 0.4s ease-in-out;
     align-items: center  ;
     box-sizing: border-box;
     flex-direction: column;
     border-radius: 10px;
     height: 40vh;
-    width:35vh; 
+    width:100vh; 
     box-shadow: 5px 6px 5px 5px #888888;
+}
+#d:hover{
+    transform: translateY(-20px);
 }
 .image-chef{
     height: 10vh;
     width: 10vh;
     border-radius: 60px;
     box-sizing: border-box;
-    cursor: pointer;
-   
+    cursor: pointer; 
+    box-shadow: 3px 4px 2px 0px #888888;
 }
 .aboutcantainer{
-    height: 80vh;
-    display: flex;
-    border: 2x solid black;
+    margin: 30px 20px 0px 20px;
+    height: 60vh;
+    display: inline-flex;
+    width: 200vh;
+    column-gap: 30px;
+    /* border: 2x solid black; */
 }
 .aboutcantainer1,.aboutcantainer2{
     height: 60vh;
     width: 100vh; 
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .aboutcantainer2{
+ background: linear-gradient(to top, rgba(193, 214, 220, 0.6), rgba(214, 197, 214, 0.804));
 background-attachment:scroll;
 overflow: scroll;
-}
-#more{
-    display: none;
 }
 .aboutcantainer1{
     position: relative;
     background-repeat: no-repeat;
 }
-.number{
+#more{
+    display: none;
+}
+.number,.imgText{
     position:absolute;
     color: #fff;
+    padding: 5px;
 }
-.captionText{
-    position: absolute;
-    
+.imageAbout{
+    height: 60vh;
+    width:100vh;
+    vertical-align: middle;
 }
+ .slide{
+    display: none;
+
+   }
+   @keyframes fade {
+    from {opacity:4} 
+    to {opacity: 1}
+  }
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  .fade {
+    animation: fade;
+    animation-duration: 3s;
+  }  
+
+.imgText{
+    color: white;
+    word-spacing: 3px;
+    font-size: medium;
+    margin: 485px 0px 0px 421px;
+}
+.footerAbout{
+    display: inline-flex;
+    width: 200vh;
+    justify-content: center;
+    align-items: center;
+}
+.aboutHeader{
+    width: 100vw;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 5px;
+    background-color: #888888;
+    transition: background-color 0.6s ease;
+}
+.activee{
+    background-color:red;
+}
+
+
+

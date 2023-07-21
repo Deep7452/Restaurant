@@ -29,6 +29,7 @@
                 <th scope="col">Sr.No</th>
                 <th scope="col">User Id</th>
                 <th scope="col">Item Name</th>
+                <th scope="col">Address</th>
                 <th scope="col">Item Description</th>
                 <th scope="col">Item price</th>
                 <th scope="col">Item Status</th>
@@ -37,15 +38,13 @@
                 @endif
             </tr>
           </thead>
-          @if ($orders->isEmpty())
-            <span> <h3 class="text-center"> There is no any orders avilable</h3></span>
-          @else
                 <tbody>  
                   @foreach ($orders as $data)  
-                  <tr id="tr_{{$data->id}}">
+                  <tr id="tr_{{$data['id']}}">
                       <td scope="row">{{$data['id']}}</td>
                       <td>{{ $data['user_id'] }}</td>
                       <td>{{$data['itemName']}}</td>
+                      <td>{{$data['address']}}</td>
                       <td> {{$data['itemDescription']}}</td>
                       <td>{{$data['itemPrice']}}</td>
                       <td>{{$data['status']}}</td>
@@ -65,9 +64,7 @@
                   </tr>
                   @endforeach
                 </tbody>
-                @endif
               </table>
-              
               <div class="AddProductdivfooter">
               <x-footer/>
               </div>

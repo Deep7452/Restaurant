@@ -21,6 +21,7 @@ class orderController extends Controller
         $alertMessage = "order successfully done";
         $data = $request->all();
         $data["user_id"] = Auth::user()->id;
+        $data['address'] =Auth::user()->address;
        $response = orders_table::create($data);
         if($response ==true){
             return response()->json(['alertMessage' => $alertMessage]);

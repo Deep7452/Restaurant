@@ -20,7 +20,7 @@
     </div
     </hr>
     @foreach ($collection as $data)
-        <div class="menuDiv">
+        <div class="menuDiv mt-4">
             <div class="container">
                 <div class="card">
                     <img src="{{ asset('./images') . '\\' . $data->itemImage }}" class=" card-img2" alt="image">

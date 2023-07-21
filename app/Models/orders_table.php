@@ -19,6 +19,7 @@ class orders_table extends Model
        'user_id',
        'ItemId',
        'itemName',
+       'address',
        'itemDescription',
        'itemPrice',
        'status',

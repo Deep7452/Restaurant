@@ -19,6 +19,7 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
         if(Auth::attempt($credentials)){    
+            
             return redirect()->intended('/')
             ->with('success',"you have successfully loginedin ");
         }

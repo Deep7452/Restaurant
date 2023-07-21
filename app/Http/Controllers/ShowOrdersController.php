@@ -4,14 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\orders_table;
+use Auth;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 class ShowOrdersController extends Controller
 {
     public function orders(Request $request)
     {
-        $orders = orders_table::all();
+        $role = Auth::user()->role;
+        if( $role==='admin'){
+            $orders = orders_table::all();
         return view('orders', compact('orders'));
+        }
+        elseif($role =='customer'){
+            $user_id = Auth::user()->id;
+            $data = orders_table::get()->toArray();
+            $orders=orders_table:: where('user_id',$user_id)->get()->toArray();
+            return view('orders', compact('orders','data'));
+        }
     }
     public function destroy($id){
         $alertMessage= 'Order Deleted Successfully';

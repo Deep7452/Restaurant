@@ -7,21 +7,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!--Jquery link -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Jquery link -->
     <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body><div class="orderSectionDiv">
-    <x-header />
-    <hr>
-    <h1 class=" mt-2 text-center"><b>Orderd page</b></h1>
+<body>
+    <div class="orderSectionDiv">
+<x-header />
+
+        <h1 class=" mt-4 text-center " style="color: antiquewhite"><b>Order Now</b></h1>
     <div class="container1">
         <div class=" card-deck1">
             <div class="card">
-                <img src="{{ asset('./images') . '\\' . $data->itemImage }}" class="  w-full card-img2" id="card3"alt="image">
+                <img src="{{ asset('./images') . '\\' . $data->itemImage }}" class="w-full card-img2" id="card3"alt="image">
                 <div class="card-body">
                     <h5 class="card-title" id='itemName'>{{ $data['itemName'] }}</h5>
                     <h6>Item Id:- <span id="itemId">{{ $data['id'] }}</span></h6>
@@ -76,7 +77,7 @@
         const ItemId =document.getElementById('itemId').innerHTML;
         const itemDescription=document.getElementById('itemDescription').innerText;
         const itemPrice =document.getElementById('totalPrice').innerHTML;       
-        let data = {ItemId, itemName, itemDescription, itemPrice};
+        let data = { ItemId,itemName, itemDescription, itemPrice};
                 $.ajaxSetup({
                     headers:{
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

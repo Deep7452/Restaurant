@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>@yield('title')</title>
+    <title>home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,13 +13,16 @@
     <div class="mainDiv">
       <x-header/>
     <h1 class="heading"><b>Welcome to my restorant</b></h1>
-  <p id=paraDashboard>
+    <marquee  direction="up" behaviour="scroll">
+  <p id=paraDashboard style="zoomIn visibility:visible ">
+    
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsa nisi consequatur 
     sint delectus,<br> voluptas eaque explicabo quae commodi dignissimos! 
     Et natus libero porro, sapiente, cupiditate,<br> pariatur sequi ipsam beatae magni 
     aliquid quos autem at ullam <br>explicabo aliquam dicta! Officiis deleniti velit 
     debitis<br> aperiam ad excepturi, natus ullam mollitia alias.
   </p>
+    </marquee>
 </div>
 <x-footer/>
   </body>

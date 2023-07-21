@@ -49,6 +49,16 @@
                 </span>
             </div>
             <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" name="address" id="" aria-describedby="helpId"
+                    placeholder=" Enter you proper address" value="{{ old('address') }}" />
+                <span class="text-danger">
+                    @error('address')
+                        {{ $message }}
+                    @enderror
+                </span>
+            </div>
+            <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" name="password" id="" aria-describedby="helpId"
                     placeholder="" />
